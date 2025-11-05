@@ -3,6 +3,9 @@ Overview
 This project demonstrates an end-to-end data engineering pipeline using Azure Data Factory, Azure Data Lake, and Databricks, designed to extract, transform, and load (ETL) NYC Taxi trip data from a public API into a scalable analytics-ready format.
 The solution follows a medallion architecture (Bronze → Silver → Gold) to ensure data quality, reusability, and performance for advanced analytics and Power BI visualization.
  Architecture
+
+
+ 
         ┌──────────────────────────┐
         │      NYC Taxi API        │
         └────────────┬─────────────┘
@@ -40,6 +43,8 @@ The solution follows a medallion architecture (Bronze → Silver → Gold) to en
         │         Power BI         │
         │ (Dashboard & Insights)   │
         └──────────────────────────┘
+
+
 Tech Stack
 Layer	Tool	Purpose
 Ingestion	Azure Data Factory	Extract data from NYC Taxi API
