@@ -46,23 +46,32 @@ The solution follows a medallion architecture (Bronze → Silver → Gold) to en
         └──────────────────────────┘
 
 
-Tech Stack
+## Tech Stack
+
 Layer	Tool	Purpose
-Ingestion	Azure Data Factory;	Extract data from NYC Taxi API
+
+Ingestion	Azure Data Factory: Extract data from NYC Taxi API
+
 Storage	Azure Data Lake Gen2:	Store raw, clean, and curated data
+
 Processing	Databricks (PySpark):	Data cleaning, transformation & aggregation
 Format	Parquet & Delta	Optimized file formats for analytics
+
 Visualization:	Power BI	Business insights & dashboards
 Security	Azure Entra ID (Service Principal)	Secure data access via OAuth
 
 #### Medallion Architecture
 
-Layer	Description	Example
+#### Layer	Description	Example
+
 🥉 Bronze	Raw data ingested from NYC API stored in original format.	bronze/trip2024/
+
 🥈 Silver	Cleaned, validated, and structured data.	silver/trip2024data/
+
 🥇 Gold	Aggregated business-level tables for analytics.	gold/trip_summary/
 
 📊 Key Transformations
+
 Converted timestamps (lpep_pickup_datetime, lpep_dropoff_datetime)
 Handled missing and invalid data (e.g., passenger_count > 0)
 Extracted trip year and month for trend analysis
@@ -81,9 +90,6 @@ Top pickup zones by revenue
 Monthly trip trends
 Average fare by borough
 Vendor performance metrics
-
- Real-World Applicability:
-This project replicates how modern data teams build production-grade pipelines for urban mobility analytics, financial forecasting, and transportation optimization.
 
 
 #### Tools & Technologies
