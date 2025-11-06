@@ -48,7 +48,7 @@ The solution follows a medallion architecture (Bronze → Silver → Gold) to en
 
 ## Tech Stack
 
-Layer	Tool	Purpose
+### Layer	Tool	Purpose
 
 Ingestion	Azure Data Factory: Extract data from NYC Taxi API
 
@@ -60,7 +60,7 @@ Format	Parquet & Delta	Optimized file formats for analytics
 Visualization:	Power BI	Business insights & dashboards
 Security	Azure Entra ID (Service Principal)	Secure data access via OAuth
 
-#### Medallion Architecture
+## Medallion Architecture
 
 #### Layer	Description	Example
 
@@ -70,7 +70,7 @@ Security	Azure Entra ID (Service Principal)	Secure data access via OAuth
 
 🥇 Gold	Aggregated business-level tables for analytics.	gold/trip_summary/
 
-📊 Key Transformations
+## 📊 Key Transformations
 
 Converted timestamps (lpep_pickup_datetime, lpep_dropoff_datetime)
 Handled missing and invalid data (e.g., passenger_count > 0)
