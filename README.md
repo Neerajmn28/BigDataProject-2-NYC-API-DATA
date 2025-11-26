@@ -1,4 +1,4 @@
-## 🚖 NYC Taxi Data Engineering Project
+#  NYC Taxi Data Engineering Project
 
 Overview:
 This project demonstrates an end-to-end data engineering pipeline using Azure Data Factory, Azure Data Lake, and Databricks, designed to extract, transform, and load (ETL) NYC Taxi trip data from a public API into a scalable analytics-ready format.
